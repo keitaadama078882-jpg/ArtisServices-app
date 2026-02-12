@@ -1,0 +1,113 @@
+import React, { useState } from 'react';
+import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
+import { useRouter } from 'expo-router';
+
+export default function SearchScreen() {
+  const router = useRouter();
+
+  const [search, setSearch] = useState('');
+  const [category, setCategory] = useState('');
+
+  const categories = [
+    'Plomberie',
+    'Électricité',
+    'Menuiserie',
+    'Mécanique',
+    'Coiffure',
+    'Nettoyage'
+  ];
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Recherche un artisan</Text>
+
+      <TextInput
+        style={styles.input}
+        placeholder="Ex : plombier"
+        value={search}
+        onChangeText={setSearch}
+      />
+
+      <Text style={styles.subtitle}>Choisis une catégorie</Text>
+
+      <View style={styles.categoryList}>
+        {categories.map((item) => (
+          <TouchableOpacity
+            key={item}
+            style={[
+              styles.categoryButton,
+              category === item && styles.selected
+            ]}
+            onPress={() => setCategory(item)}
+          >
+            <Text style={styles.categoryText}>{item}</Text>
+          </TouchableOpacity>
+        ))}
+      </View>
+
+      <TouchableOpacity
+        style={styles.searchButton}
+        onPress={() =>
+          router.push({
+            pathname: '/result',
+            params: { search, category }
+          })
+        }
+      >
+        <Text style={styles.searchText}>Voir les résultats</Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 20,
+    backgroundColor: '#ffffff'
+  },
+  title: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    marginBottom: 15
+  },
+  subtitle: {
+    fontSize: 16,
+    marginVertical: 10
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: '#ccc',
+    padding: 12,
+    borderRadius: 8
+  },
+  categoryList: {
+    flexDirection: 'row',
+    flexWrap: 'wrap'
+  },
+  categoryButton: {
+    borderWidth: 1,
+    borderColor: '#007bff',
+    borderRadius: 20,
+    paddingVertical: 6,
+    paddingHorizontal: 12,
+    margin: 5
+  },
+  selected: {
+    backgroundColor: '#007bff'
+  },
+  categoryText: {
+    color: '#007bff'
+  },
+  searchButton: {
+    backgroundColor: '#007bff',
+    padding: 15,
+    borderRadius: 10,
+    marginTop: 25
+  },
+  searchText: {
+    color: '#fff',
+    textAlign: 'center',
+    fontSize: 16
+  }
+});

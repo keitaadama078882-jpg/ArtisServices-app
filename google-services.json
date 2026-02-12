@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "434160142551",
+    "project_id": "artiservices-a20dc",
+    "storage_bucket": "artiservices-a20dc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:434160142551:android:ad8051c1d833c5ce1e8892",
+        "android_client_info": {
+          "package_name": "com.artisservices.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOKHhyEY6jv5NLJkyBvL57bu6YaNpB61Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
