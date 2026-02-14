@@ -1,50 +1,37 @@
-# Welcome to your Expo app 👋
+# ArtisServices App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+ArtisServices est une application mobile développée avec React Native et Expo.
 
-## Get started
+## 📱 Description
 
-1. Install dependencies
+Cette application permet de connecter les clients avec des artisans professionnels.
 
-   ```bash
-   npm install
-   ```
+## 🚀 Technologies utilisées
 
-2. Start the app
+- React Native
+- Expo
+- TypeScript
+- Firebase
+- Git & GitHub
 
-   ```bash
-   npx expo start
-   ```
+## 📦 Installation
 
-In the output, you'll find options to open the app in a
+Clonez le projet :
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+git clone https://github.com/keitaadama078882-jpg/ArtisServices-app.git
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Puis installez les dépendances :
 
-## Get a fresh project
+npm install
 
-When you're ready, run:
+Lancez le projet :
 
-```bash
-npm run reset-project
-```
+npx expo start
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 👨‍💻 Auteur
 
-## Learn more
+Keita Adama
 
-To learn more about developing your project with Expo, look at the following resources:
+## 📄 Licence
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Projet personnel.
